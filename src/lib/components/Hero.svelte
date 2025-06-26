@@ -2,64 +2,80 @@
   import Button from "./ui/button/button.svelte";
 </script>
 
-<div class="flex flex-col gap-12">
-  <h2 class="text-2xl font-cofo-bold-italic w-3xs text-wrap">
-    Les Chasseurs De Primes
+<div class="flex flex-col gap-12 w-full">
+  <h2
+    class="text-4xl sm:text-6xl mb-8 max-w-full sm:max-w-1/3 text-center sm:text-left"
+  >
+    La Revue du mois de Juillet 2025
   </h2>
-  <div class="flex gap-16">
-    <div class="flex flex-col gap-4 max-w-3xs">
-      <p>
-        Publicité Libre<br />Les enjeux d'une agence de publicité indépendante
-      </p>
-      <p>
-        Déborder Bolloré<br />Découverte du projet mené de front<br />par 128
-        maisons d'édition indépendantes.
-      </p>
-      <p>
-        Publicité Libre<br />Les enjeux d'une agence<br />de publicité
-        indépendante
-      </p>
-    </div>
-    <div class="flex flex-col">
-      <div class="flex gap-4 w-fit">
-        <img
-          src="/images/hero.png"
-          alt="Image de la revue Quête"
-          class="bg-gray-200 h-full aspect-[2/3] w-auto max-h-96"
-        />
-        <img
-          src="/images/hero.png"
-          alt="Image de la revue Quête"
-          class="bg-gray-200 h-full aspect-[2/3] w-auto max-h-96"
-        />
+  <div class="flex flex-col lg:flex-row gap-8 lg:gap-16 w-full">
+    <div class="w-full lg:flex-1/4 mb-8 lg:mb-0">
+      <div class="flex flex-col gap-8 max-w-full sm:max-w-3xs">
+        <h3 class="text-2xl sm:text-3xl font-cofo-bold-italic">
+          Les Chasseurs De Primes
+        </h3>
+        <p>
+          Publicité Libre<br />Les enjeux d'une agence de publicité indépendante
+        </p>
+        <p>
+          Déborder Bolloré<br />Découverte du projet mené de front par 128
+          maisons d'édition indépendantes.
+        </p>
+        <p>
+          Publicité Libre<br />Les enjeux d'une agence de publicité indépendante
+        </p>
       </div>
+    </div>
 
-      <div class="flex gap-4 w-min">
-        <div class="font-cofo-bold flex mx-auto w-md">
-          <p class="mr-auto">
-            La revue coûte 13€.<br />
-            <span class="font-cofo-italic">Précommande jusqu'au 27 juin.</span>
-          </p>
+    <div class="w-full lg:basis-1/2 min-w-0 mb-8 lg:mb-0">
+      <div class="flex flex-col gap-8 w-full">
+        <div class="flex flex-col sm:flex-row gap-4 w-full">
+          <div class="flex-1">
+            <img
+              src="/images/COUV_1.jpg"
+              alt="Revue Quête"
+              class="w-full h-auto object-contain"
+              style="aspect-ratio: auto;"
+            />
+          </div>
+          <div class="flex-1 mt-4 sm:mt-0">
+            <img
+              src="/images/COUV_2.jpg"
+              alt="Revue Quête"
+              class="w-full h-auto object-cover rounded"
+            />
+          </div>
         </div>
-        <Button class="ml-auto">Pré-commande</Button>
+        <div class="flex flex-col sm:flex-row gap-4 items-center">
+          <div class="font-cofo-bold flex">
+            <p>
+              La revue coûte 13€.<br />
+              <span class="font-cofo-italic">Précommande jusqu'au 27 juin.</span
+              >
+            </p>
+          </div>
+          <Button class="ml-0 sm:ml-auto w-full sm:w-auto">Pré-commande</Button>
+        </div>
       </div>
     </div>
 
-    <div class="flex flex-col gap-4 text-right pr-4">
-      <h3 class="font-cofo-bold-italic text-3xl">Les Bandits</h3>
-      <p>
-        Etude de cas<br />Le Bandit du mois:<br /><span class="font-cofo-italic"
-          >Shein par Havas</span
-        >
-      </p>
-      <p>
-        <span class="font-cofo-italic">Impact</span><br />La coalition Stop Fast
-        Fashion<br />
-      </p>
-      <p>
-        <span class="font-cofo-italic">Publicité Libre</span><br />Les enjeux
-        d'une agence de publicité indépendante
-      </p>
+    <div class="w-full lg:flex-1/4 flex justify-end">
+      <div class="flex flex-col gap-8 max-w-full sm:max-w-3xs text-right">
+        <h3 class="font-cofo-bold-italic text-2xl sm:text-3xl">Les Bandits</h3>
+        <p>
+          Etude de cas<br />Le Bandit du mois:<br /><span
+            class="font-cofo-italic">Shein par Havas</span
+          >
+        </p>
+        <p>
+          <span class="font-cofo-italic">Impact</span><br />La coalition Stop
+          Fast Fashion nous raconte son combat
+        </p>
+        <p>
+          <span class="font-cofo-italic">Tout se paie</span><br />Le monde de la
+          publicité en 2025
+        </p>
+      </div>
     </div>
   </div>
 </div>
