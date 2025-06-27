@@ -1,5 +1,6 @@
 <script lang="ts">
   import Header from "$lib/components/Header.svelte";
+  import Footer from "$lib/components/Footer.svelte";
   import Hero from "$lib/components/Hero.svelte";
   import LastMonth from "$lib/components/LastMonth.svelte";
   import Navbar from "$lib/components/Navbar.svelte";
@@ -28,3 +29,4 @@
     <Shortlist />
   </div>
 </div>
+<Footer />
