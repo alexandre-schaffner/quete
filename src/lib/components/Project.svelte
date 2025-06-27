@@ -1,8 +1,14 @@
 <script lang="ts">
   import Button from "./ui/button/button.svelte";
 
-  let { index, author, title, description, votes, images, learnMore, isTop1 } =
+  let { index, author, title, description, images, learnMore, isTop1 } =
     $props();
+
+  let votes: number = $state(
+    Math.floor(
+      Math.random() * (index === "1" ? 100 : index === "2" ? 50 : 25),
+    ) + 1,
+  );
 </script>
 
 <div class="flex flex-col gap-8">
@@ -49,7 +55,9 @@
     <div class="flex flex-col gap-4 min-h-full w-full md:w-auto">
       <p class="font-cofo-italic max-w-full sm:max-w-xs">{description}</p>
       <div class="flex flex-col sm:flex-row gap-2 mt-auto w-full">
-        <Button class="w-full sm:w-auto">Je vote pour ce projet</Button>
+        <Button class="w-full sm:w-auto" onclick={() => (votes += 1)}
+          >Je vote pour ce projet</Button
+        >
         <Button
           class="bg-gray-200 w-full sm:w-auto"
           variant="secondary"
