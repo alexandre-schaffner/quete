@@ -11,31 +11,36 @@
   );
 </script>
 
-<div class="flex flex-col gap-8">
+<div class="flex flex-col gap-4">
   <h4
-    class="text-lg sm:text-xl font-cofo-bold flex flex-col sm:flex-row gap-2 items-center"
+    class="text-lg sm:text-xl font-cofo-bold flex flex-col sm:flex-row gap-2 items-baseline-last"
   >
     {#if isTop1}
+      <span class="font-cofo-italic text-right text-xs"
+        >0{votes}<br />Votes</span
+      >
       <span
-        class="flex flex-col items-center gap-2 font-cofo-bold text-2xl sm:text-3xl"
+        class="flex flex-col items-center justify-around font-cofo-bold text-2xl sm:text-3xl"
       >
         <img src="/svg/BONNET D-ANE.svg" alt="Bonnet d'âne" class="w-[32px]" />
         <span
-          class="flex flex-col rounded-full bg-black text-white p-1 w-6 h-6 items-center justify-center"
+          class="flex rounded-full bg-black text-white p-1 w-8 h-8 items-center justify-center"
           style="background: radial-gradient(circle, #000 100%, transparent 100%);"
         >
           {index}
         </span>
       </span>
     {:else}
+      <span class="font-cofo-italic text-right text-xs self-center"
+        >0{votes}<br />Votes</span
+      >
       <span
-        class="rounded-full bg-black text-white p-1 w-6 h-6 flex items-center justify-center"
+        class="rounded-full bg-black text-white p-1 w-8 h-8 flex items-center justify-center"
         style="background: radial-gradient(circle, #000 100%, transparent 100%);"
       >
         {index}
       </span>
     {/if}
-    <span class="font-cofo-italic text-right text-xs">0{votes}<br />Votes</span>
 
     <span class="text-center sm:text-left"
       >{author} - <span class="font-cofo-italic">{title}</span></span
