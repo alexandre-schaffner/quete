@@ -11,6 +11,6 @@
   <img
     src="/icon.svg"
     alt="Logo Instagram"
-    class="w-8 h-8 object-contain mt-2"
+    class="w-12 h-12 object-contain mt-2"
   />
 </div>
