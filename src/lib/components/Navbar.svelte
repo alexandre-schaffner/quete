@@ -1,23 +1,21 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  let { sections, shortlistEl } = $props();
+  let {
+    sections,
+    shortlistEl,
+  }: { sections: string[]; shortlistEl: HTMLElement | null } = $props();
   let currentSection = $state(0);
-  // @ts-ignore: Svelte $props destructure is not reassignable
 
   function handleScroll() {
     if (!shortlistEl) return;
     const rect = shortlistEl.getBoundingClientRect();
-    if (rect.top < window.innerHeight / 2) {
-      currentSection = 1;
-    } else {
-      currentSection = 0;
-    }
+    if (rect.top < window.innerHeight / 2) currentSection = 1;
+    else currentSection = 0;
   }
 
   onMount(() => {
     window.addEventListener("scroll", handleScroll);
     handleScroll();
-    $inspect("currentSection", currentSection);
     return () => window.removeEventListener("scroll", handleScroll);
   });
 </script>
@@ -28,7 +26,14 @@
   {#each sections as section, index}
     {#if index === currentSection}
       <div>
-        <h2 class="text-2xl sm:text-6xl font-black">0{index + 1}.</h2>
+        <div class="flex">
+          <h2 class="text-2xl sm:text-6xl font-black">0{index + 1}.</h2>
+          <img
+            src="/svg/FLECHE.svg"
+            alt="Point d'exclamation"
+            class="w-[64px] ml-2 sm:ml-4"
+          />
+        </div>
         <p class="text-base sm:text-lg">{section}</p>
       </div>
     {:else}
