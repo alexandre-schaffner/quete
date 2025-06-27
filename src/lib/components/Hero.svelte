@@ -54,7 +54,9 @@
               >
             </p>
           </div>
-          <Button class="ml-0 sm:ml-auto w-full sm:w-auto">Pré-commande</Button>
+          <Button class="ml-0 sm:ml-auto w-full sm:w-auto" href="/not-ready"
+            >Pré-commande</Button
+          >
         </div>
       </div>
     </div>

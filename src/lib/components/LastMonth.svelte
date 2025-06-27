@@ -34,7 +34,9 @@
           8€.<br />100% des bénéfices (4€/pack) sont reversés à la Coalition
           Stop Fast Fashion.
         </p>
-        <Button class="mt-4 sm:mt-auto w-full sm:w-auto">Pré-commande</Button>
+        <Button class="mt-4 sm:mt-auto w-full sm:w-auto" href="/not-ready"
+          >Pré-commande</Button
+        >
       </div>
     </div>
     <img
